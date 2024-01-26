@@ -10,4 +10,7 @@ app
   })
   .then(() => {
     console.log(`🚀 HTTP server running at port ${port}`);
+  })
+  .catch((err) => {
+    console.error("❌ HTTP not running: ", err);
   });
