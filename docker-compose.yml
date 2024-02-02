@@ -2,7 +2,7 @@ version: "3.1"
 name: "gympass-like-app"
 services:
   db:
-    container_name: "postgres-db"
+    container_name: "gympass-like-postgres-db"
     image: bitnami/postgresql
     restart: always
     ports:
