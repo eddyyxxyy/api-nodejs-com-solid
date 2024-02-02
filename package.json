@@ -10,6 +10,8 @@
     "build": "tsup src --out-dir build --minify",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
     "prepare": "husky",
     "lint": "eslint src --ext .ts",
     "commitlint": "commitlint --edit"
@@ -24,6 +26,8 @@
     "@types/node": "20.11.5",
     "@typescript-eslint/eslint-plugin": "6.19.1",
     "@typescript-eslint/parser": "6.19.1",
+    "@vitest/coverage-v8": "1.2.2",
+    "@vitest/ui": "1.2.2",
     "eslint": "8.56.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.1.3",
