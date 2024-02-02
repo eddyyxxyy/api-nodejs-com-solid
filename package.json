@@ -2,13 +2,16 @@
   "name": "api-nodejs-com-solid",
   "version": "1.0.0",
   "description": "GymPass style app.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start:dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
     "build": "tsup src --out-dir build --minify",
-    "lint": "eslint src --ext .ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "prepare": "husky",
+    "lint": "eslint src --ext .ts",
     "commitlint": "commitlint --edit"
   },
   "keywords": [],
@@ -30,7 +33,9 @@
     "prisma": "5.8.1",
     "tsup": "8.0.1",
     "tsx": "4.7.0",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "vite-tsconfig-paths": "4.3.1",
+    "vitest": "1.2.2"
   },
   "dependencies": {
     "@prisma/client": "5.8.1",
