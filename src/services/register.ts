@@ -1,3 +1,4 @@
+import { User } from "@prisma/client";
 import { hash } from "bcrypt";
 
 import { IUsersRepository } from "@/repositories/users-repository";
@@ -10,10 +11,18 @@ interface IRegisterUserService {
   password: string;
 }
 
+interface IRegisterUserServiceResponse {
+  user: User;
+}
+
 export class RegisterUserService {
   constructor(private readonly usersRepository: IUsersRepository) {}
 
-  async execute({ name, email, password }: IRegisterUserService) {
+  async execute({
+    name,
+    email,
+    password,
+  }: IRegisterUserService): Promise<IRegisterUserServiceResponse> {
     const userWithEmail = await this.usersRepository.findByEmail(email);
 
     if (userWithEmail) {
@@ -22,10 +31,12 @@ export class RegisterUserService {
 
     const passwordHash = await hash(password, 6);
 
-    await this.usersRepository.create({
+    const user = await this.usersRepository.create({
       name,
       email,
       password_hash: passwordHash,
     });
+
+    return { user };
   }
 }
