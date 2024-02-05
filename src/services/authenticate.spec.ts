@@ -3,16 +3,16 @@ import { beforeEach, describe, expect, it } from "vitest";
 
 import { InMemoryUsersRepository } from "@/repositories/in-memory/in-memory-users-repository";
 
-import { AuthenticateService } from "./authenticate";
+import { AuthenticateUserService } from "./authenticate";
 import { InvalidCredentialsError } from "./errors/invalid-credentials-error";
 
 let inMemoryUsersRepository: InMemoryUsersRepository;
-let authenticateService: AuthenticateService;
+let authenticateService: AuthenticateUserService;
 
 describe("Authenticate Service", () => {
   beforeEach(() => {
     inMemoryUsersRepository = new InMemoryUsersRepository();
-    authenticateService = new AuthenticateService(inMemoryUsersRepository);
+    authenticateService = new AuthenticateUserService(inMemoryUsersRepository);
   });
 
   it("should be able to authenticate", async () => {

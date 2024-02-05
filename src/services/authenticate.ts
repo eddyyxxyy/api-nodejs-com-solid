@@ -5,22 +5,22 @@ import { IUsersRepository } from "@/repositories/users-repository";
 
 import { InvalidCredentialsError } from "./errors/invalid-credentials-error";
 
-interface IAuthenticateServiceRequest {
+interface IAuthenticateUserServiceRequest {
   email: string;
   password: string;
 }
 
-interface IAuthenticateServiceResponse {
+interface IAuthenticateUserServiceResponse {
   user: User;
 }
 
-export class AuthenticateService {
+export class AuthenticateUserService {
   constructor(private readonly usersRepository: IUsersRepository) {}
 
   async execute({
     email,
     password,
-  }: IAuthenticateServiceRequest): Promise<IAuthenticateServiceResponse> {
+  }: IAuthenticateUserServiceRequest): Promise<IAuthenticateUserServiceResponse> {
     const user = await this.usersRepository.findByEmail(email);
 
     if (!user) {
