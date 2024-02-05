@@ -5,7 +5,7 @@ import { IUsersRepository } from "@/repositories/users-repository";
 
 import { UserAlreadyExistsError } from "./errors/user-already-exists-error";
 
-interface IRegisterUserService {
+interface IRegisterUserServiceRequest {
   name: string;
   email: string;
   password: string;
@@ -22,7 +22,7 @@ export class RegisterUserService {
     name,
     email,
     password,
-  }: IRegisterUserService): Promise<IRegisterUserServiceResponse> {
+  }: IRegisterUserServiceRequest): Promise<IRegisterUserServiceResponse> {
     const userWithEmail = await this.usersRepository.findByEmail(email);
 
     if (userWithEmail) {
