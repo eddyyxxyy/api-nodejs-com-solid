@@ -13,7 +13,7 @@ O que é possível do usuário fazer em nossa aplicação:
 - [ ] Deve ser possível obter o número de check-ins realizado pelo usuário logado;
 - [ ] Deve ser possível buscar academias próximas ao usuário logado;
 - [ ] Deve ser possível buscar academias pelo nome com o usuário logado;
-- [ ] Deve ser possível realizar check-in em uma academia com o usuário logado;
+- [x] Deve ser possível realizar check-in em uma academia com o usuário logado;
 - [ ] Deve ser possível validar o check-in de um usuário logado;
 - [ ] Deve ser possível cadastrar uma academia.
 
@@ -23,7 +23,7 @@ Caminhos que cada requisito pode tomar, todas existem à partir de um Requisito
 Funcional:
 
 - [x] O usuário não deve poder se cadastrar com um e-mail duplicado;
-- [ ] O usuário não pode fazer 2 check-in no mesmo dia (à depender do plano);
+- [x] O usuário não pode fazer 2 check-in no mesmo dia (à depender do plano);
 - [ ] O usuário não pode fazer check-in se não estiver mais de 100m de distância da academia;
 - [ ] O check-in só pode ser validado em até 20min após criado;
 - [ ] O check-in só pode ser validado por administradores;
