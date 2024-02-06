@@ -28,7 +28,7 @@ describe("Get User Profile Service", () => {
   });
 
   it("should not be able to get the user profile information with wrong id", async () => {
-    await expect(() =>
+    void expect(() =>
       sut.execute({ userId: "non-existing-id" }),
     ).rejects.toBeInstanceOf(ResourceNotFoundError);
   });
