@@ -49,7 +49,7 @@ describe("Register Service", () => {
       password: "123456",
     });
 
-    void expect(() =>
+    await expect(() =>
       sut.execute({
         name: "John Doe",
         email,
