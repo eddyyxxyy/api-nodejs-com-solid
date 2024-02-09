@@ -9,7 +9,7 @@ O que é possível do usuário fazer em nossa aplicação:
 - [x] Deve ser possível se cadastrar;
 - [x] Deve ser possível se autenticar;
 - [x] Deve ser possível obter o perfil do usuário logado;
-- [ ] Deve ser possível obter o histórico do usuário logado;
+- [x] Deve ser possível obter o histórico de check-ins do usuário logado;
 - [ ] Deve ser possível obter o número de check-ins realizado pelo usuário logado;
 - [ ] Deve ser possível buscar academias próximas ao usuário logado;
 - [ ] Deve ser possível buscar academias pelo nome com o usuário logado;
@@ -36,5 +36,5 @@ que vou usar, estratégia de caching, paginação e outros detalhes:
 
 - [x] A senha do usuário precisa estar criptografada;
 - [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
-- [ ] Todas as listas de dados precisam estar paginadas com 20 item por página;
+- [x] Todas as listas de dados precisam estar paginadas com 20 item por página;
 - [ ] O usuário tem de ser identificado por um JWT (JSON Web Token);
