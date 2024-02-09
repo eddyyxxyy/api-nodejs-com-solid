@@ -15,7 +15,7 @@ O que é possível do usuário fazer em nossa aplicação:
 - [ ] Deve ser possível buscar academias pelo nome com o usuário logado;
 - [x] Deve ser possível realizar check-in em uma academia com o usuário logado;
 - [ ] Deve ser possível validar o check-in de um usuário logado;
-- [ ] Deve ser possível cadastrar uma academia.
+- [x] Deve ser possível cadastrar uma academia.
 
 ## RNs (Regras de Negócio)
 
@@ -24,7 +24,7 @@ Funcional:
 
 - [x] O usuário não deve poder se cadastrar com um e-mail duplicado;
 - [x] O usuário não pode fazer 2 check-in no mesmo dia (à depender do plano);
-- [ ] O usuário não pode fazer check-in se não estiver mais de 100m de distância da academia;
+- [x] O usuário não pode fazer check-in se não estiver mais de 100m de distância da academia;
 - [ ] O check-in só pode ser validado em até 20min após criado;
 - [ ] O check-in só pode ser validado por administradores;
 - [ ] A academia só pode ser cadastrada por administradores;
