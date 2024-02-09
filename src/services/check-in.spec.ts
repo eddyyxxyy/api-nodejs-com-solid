@@ -11,7 +11,7 @@ let inMemoryGymsRespository: InMemoryGymsRepository;
 let sut: CheckInsService;
 
 describe("Check In Service", () => {
-  beforeEach(() => {
+  beforeEach(async () => {
     inMemoryCheckInsRepository = new InMemoryCheckInsRepository();
     inMemoryGymsRespository = new InMemoryGymsRepository();
     sut = new CheckInsService(
@@ -19,7 +19,7 @@ describe("Check In Service", () => {
       inMemoryGymsRespository,
     );
 
-    inMemoryGymsRespository.gyms.push({
+    await inMemoryGymsRespository.create({
       id: "gym-01",
       name: "JavaScript Gym",
       description: "",
@@ -89,7 +89,7 @@ describe("Check In Service", () => {
   });
 
   it("should not be able to check in on distant gym", async () => {
-    inMemoryGymsRespository.gyms.push({
+    await inMemoryGymsRespository.create({
       id: "gym-02",
       name: "JavaScript Gym",
       description: "",
