@@ -11,8 +11,8 @@ O que é possível do usuário fazer em nossa aplicação:
 - [x] Deve ser possível obter o perfil do usuário logado;
 - [x] Deve ser possível obter o histórico de check-ins do usuário logado;
 - [x] Deve ser possível obter o número de check-ins realizado pelo usuário logado;
-- [ ] Deve ser possível buscar academias próximas ao usuário logado;
-- [ ] Deve ser possível buscar academias pelo nome com o usuário logado;
+- [x] Deve ser possível buscar academias próximas ao usuário logado (até 10km);
+- [x] Deve ser possível buscar academias pelo nome com o usuário logado;
 - [x] Deve ser possível realizar check-in em uma academia com o usuário logado;
 - [ ] Deve ser possível validar o check-in de um usuário logado;
 - [x] Deve ser possível cadastrar uma academia.
