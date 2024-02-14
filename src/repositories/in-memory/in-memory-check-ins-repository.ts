@@ -8,6 +8,10 @@ import type { ICheckInsRepository } from "../check-ins-repository";
 export class InMemoryCheckInsRepository implements ICheckInsRepository {
   public checkIns: CheckIn[] = [];
 
+  async countByUserId(userId: string): Promise<number> {
+    return this.checkIns.filter((checkIn) => checkIn.user_id === userId).length;
+  }
+
   async create(data: Prisma.CheckInUncheckedCreateInput) {
     const checkIn = {
       id: randomUUID(),
