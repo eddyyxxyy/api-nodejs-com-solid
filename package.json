@@ -42,6 +42,7 @@
     "vitest": "1.2.2"
   },
   "dependencies": {
+    "@fastify/jwt": "8.0.0",
     "@prisma/client": "5.8.1",
     "bcrypt": "5.1.1",
     "dayjs": "1.11.10",
