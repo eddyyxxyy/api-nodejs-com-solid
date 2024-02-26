@@ -8,13 +8,15 @@
     "start:dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
     "build": "tsup src --out-dir build --minify",
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "vitest run --dir src/services",
+    "test:e2e": "vitest run --dir src/http",
+    "test:watch": "vitest --dir src/services",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
     "prepare": "husky",
     "lint": "eslint src --ext .ts",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "pretest:e2e": "cd prisma/vitest-environment-prisma && npm link && cd ../.. && npm link vitest-environment-prisma"
   },
   "keywords": [],
   "author": "",
