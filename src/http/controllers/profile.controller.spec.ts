@@ -3,7 +3,7 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 import { app } from "@/app";
 
-describe("Authenticate (E2E)", () => {
+describe("Profile (E2E)", () => {
   beforeAll(async () => {
     await app.ready();
   });
@@ -12,7 +12,7 @@ describe("Authenticate (E2E)", () => {
     await app.close();
   });
 
-  it("should be able to authenticate", async () => {
+  it("should be able to get user profile", async () => {
     await request(app.server).post("/users").send({
       name: "John Doe",
       email: "johndoe@example.com",
@@ -32,10 +32,14 @@ describe("Authenticate (E2E)", () => {
       )
       .send();
 
-    expect(authResponse.statusCode).toEqual(200);
-    expect(authResponse.body).toEqual({
-      token: expect.stringMatching(/^(?:[\w-]*\.){2}[\w-]*$/) as string,
-    });
     expect(profileResponse.statusCode).toEqual(200);
+    expect(
+      (profileResponse.body as { user: { name: string; email: string } }).user,
+    ).toEqual(
+      expect.objectContaining({
+        name: "John Doe",
+        email: "johndoe@example.com",
+      }),
+    );
   });
 });
