@@ -1,5 +1,4 @@
 import { Gym } from "@prisma/client";
-import { Decimal } from "@prisma/client/runtime/library";
 
 import { IGymsRepository } from "@/repositories/gyms-repository";
 
@@ -7,8 +6,8 @@ interface IRegisterGymServiceRequest {
   name: string;
   description: string | null;
   phone: string | null;
-  latitude: Decimal;
-  longitude: Decimal;
+  latitude: number;
+  longitude: number;
 }
 
 interface IRegisterGymServiceResponse {
