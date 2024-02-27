@@ -7,13 +7,13 @@ export async function nearbyController(
   request: FastifyRequest,
   reply: FastifyReply,
 ): Promise<never> {
-  const nearbyGymsBodySchema = z.object({
+  const nearbyGymsQuerySchema = z.object({
     userLatitude: z.number().refine((value) => Math.abs(value) <= 90),
     userLongitude: z.number().refine((value) => Math.abs(value) <= 180),
   });
 
-  const { userLatitude, userLongitude } = nearbyGymsBodySchema.parse(
-    request.body,
+  const { userLatitude, userLongitude } = nearbyGymsQuerySchema.parse(
+    request.query,
   );
 
   const fetchNearbyGymService = makeFetchNearbyGymsService();

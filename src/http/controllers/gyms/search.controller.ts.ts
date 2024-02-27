@@ -12,7 +12,7 @@ export async function searchController(
     query: z.string(),
   });
 
-  const { page, query } = searchGymsQuerySchema.parse(request.body);
+  const { page, query } = searchGymsQuerySchema.parse(request.query);
 
   const searchGymsService = makeSearchGymsService();
 
