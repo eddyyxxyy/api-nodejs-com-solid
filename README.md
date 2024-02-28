@@ -26,8 +26,8 @@ Funcional:
 - [x] O usuário não pode fazer 2 check-in no mesmo dia (à depender do plano);
 - [x] O usuário não pode fazer check-in se não estiver mais de 100m de distância da academia;
 - [x] O check-in só pode ser validado em até 20min após criado;
-- [ ] O check-in só pode ser validado por administradores;
-- [ ] A academia só pode ser cadastrada por administradores;
+- [x] O check-in só pode ser validado por administradores;
+- [x] A academia só pode ser cadastrada por administradores;
 
 ## RNFs (Requisitos Não Funcionais)
 
@@ -37,4 +37,4 @@ que vou usar, estratégia de caching, paginação e outros detalhes:
 - [x] A senha do usuário precisa estar criptografada;
 - [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
 - [x] Todas as listas de dados precisam estar paginadas com 20 item por página;
-- [ ] O usuário tem de ser identificado por um JWT (JSON Web Token);
+- [x] O usuário tem de ser identificado por um JWT (JSON Web Token);
