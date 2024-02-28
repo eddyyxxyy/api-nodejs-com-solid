@@ -14,7 +14,7 @@ describe("Profile (E2E)", () => {
   });
 
   it("should be able to get user profile", async () => {
-    const authResponse = await createAndAuthenticateUser(app);
+    const authResponse = await createAndAuthenticateUser(app, true);
 
     const profileResponse = await request(app.server)
       .get("/me")

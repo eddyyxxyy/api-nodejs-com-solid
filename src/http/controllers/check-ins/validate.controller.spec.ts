@@ -15,7 +15,7 @@ describe("Validate Check-In (E2E)", () => {
   });
 
   it("should be able to validate a check-in", async () => {
-    const authResponse = await createAndAuthenticateUser(app);
+    const authResponse = await createAndAuthenticateUser(app, true);
 
     const user = await prisma.user.findFirstOrThrow();
 
