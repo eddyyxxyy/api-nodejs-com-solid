@@ -13,9 +13,9 @@ jobs:
         ports:
           - 5432:5432
         env:
-          POSTGRESQL_USERNAME: docker
-          POSTGRESQL_PASSWORD: docker
-          POSTGRESQL_DATABASE: apisolid
+          POSTGRESQL_USERNAME: edsonpimenta
+          POSTGRESQL_PASSWORD: 123456
+          POSTGRESQL_DATABASE: gympass_like
 
     steps:
       - uses: actions/checkout@v3
@@ -29,5 +29,5 @@ jobs:
 
       - run: npm run test:e2e
         env:
-          JWT_SECRET: testing
-          DATABASE_URL: "postgresql://docker:docker@localhost:5432/apisolid?schema=public"
+          JWT_SECRET: supersecret
+          DATABASE_URL: "postgresql://edsonpimenta:123456@localhost:5432/gympass_like?schema=public"
